@@ -1,0 +1,334 @@
+@charset {
+  "utf-8"; {
+    .margin {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+}
+header {
+  height: 36px;
+  background: #f2f2f2;
+  ul {
+    &.header-l {
+      width: 338px;
+      height: 36px;
+      float: left;
+      a {
+        font: 12px/36px "";
+        height: 36px;
+        float: left;
+        margin-left: 18px;
+        span {
+          background: url(../img/xing.png) no-repeat left;
+          display: block;
+          height: 24px;
+          float: left;
+          width: 24px;
+          margin-top: 6px;
+        }
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+        .wei {
+          background: url(../img/weixin.png) no-repeat left;
+        }
+        .shouji {
+          background: url(../img/shouji.png) no-repeat left;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+    &.header-center {
+      width: 360px;
+      height: 36px;
+      float: left;
+      margin-left: 214px;
+      a {
+        font: 12px/36px "";
+        height: 36px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      span {
+        background: url(../img/shu.png) no-repeat right;
+        display: block;
+        height: 12px;
+        float: left;
+        width: 2px;
+        margin-top: 13px;
+      }
+    }
+    &.header-right {
+      width: 288px;
+      height: 36px;
+      float: left;
+      a {
+        font: 12px/36px "";
+        height: 36px;
+        float: left;
+        &.active {
+          margin-left: 18px;
+        }
+        span {
+          background: url(../img/gouwu.png)
+no-repeat left;
+          display: block;
+          height: 24px;
+          float: left;
+          width: 24px;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+#logo {
+  height: 120px;
+  a {
+    float: left;
+    width: 225px;
+    display: block;
+    img {
+      float: left;
+      width: 200px;
+      height: 120px;
+      display: block;
+    }
+  }
+  .tel {
+    width: 378px;
+    float: right;
+    height: 120px;
+  }
+  span {
+    margin-top: 42px;
+    display: block;
+    float: left;
+    margin-right: 48px;
+    font: 12px/24px "";
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#search {
+  width: 410px;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+  float: left;
+  margin-left: 180px;
+  input {
+    width: 246px;
+    height: 100%;
+    border: 1px solid #ff6a00;
+    height: 22px;
+    padding: 9px 7px;
+    font: 16px arial;
+    border-right: 0;
+    vertical-align: top;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+  }
+  button {
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 102px;
+    height: 42px;
+    line-height: 34px;
+    padding: 0;
+    border: 0;
+    background: none;
+    background-color: #ff6a00;
+    font-size: 16px;
+    color: white;
+    box-shadow: none;
+    font-weight: normal;
+    margin-left: -20px;
+  }
+}
+.result {
+  position: absolute;
+  padding: 9px 7px;
+  background: #ddd;
+}
+.search-res {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 244px;
+  border: 1px solid #ff6a00;
+  border-top: none;
+  border-bottom: none;
+  li {
+    list-style-type: none;
+    line-height: 20px;
+    padding: 2px 5px;
+    border-bottom: 1px solid #b6b6b6;
+  }
+}
+/*.search-res li:hover{background: pink;}*/
+#denglu {
+  height: 488px;
+  background: url(../img/re.png) no-repeat;
+  width: 100%;
+  padding-top: 40px;
+  float: left;
+}
+.contact {
+  width: 440px;
+  height: 408px;
+  background: white;
+  margin: 0px 700px;
+  border: 1px solid #dbdbdb;
+  padding-top: 20px;
+  *:focus {
+    outline: none;
+  }
+  ul {
+    width: 440px;
+    margin: 0 auto;
+    margin-top: 50px;
+    li {
+      border-bottom: 1px solid #dfdfdf;
+      list-style: none;
+      padding: 12px;
+      label {
+        width: 60px;
+        display: inline-block;
+        float: left;
+      }
+      input {
+        &:focus {
+          border-color: #c00;
+          padding-right: 70px;
+        }
+      }
+      input[type=text] {
+        transition: padding .25s;
+        -o-transition: padding  .25s;
+        -moz-transition: padding  .25s;
+        -webkit-transition: padding  .25s;
+      }
+      input[type=password] {
+        transition: padding  .25s;
+        -o-transition: padding  .25s;
+        -moz-transition: padding  .25s;
+        -webkit-transition: padding  .25s;
+      }
+    }
+  }
+}
+form {
+  width: 440px;
+  margin-top: 10px;
+}
+.form1-top {
+  height: 70px;
+  border-bottom: 2px solid #d9d9d9;
+  width: 370px;
+  margin-left: 20px;
+  text-align: center;
+  p {
+    width: 100px;
+    float: left;
+    font: 16px/70px "";
+    color: #737373;
+    border-bottom: #ff6a00 2px solid;
+  }
+  span {
+    font: 16px/70px "";
+    color: #737373;
+    margin-left: 30px;
+    border-bottom: #ff6a00 2px solid;
+    display: block;
+    float: left;
+    width: 100px;
+    color: #ff6a00;
+  }
+}
+.contact ul li input[type=text],.contact ul li input[type=password] {
+  width: 220px;
+  height: 25px;
+  border: 1px solid #aaa;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.btn {
+  position: relative;
+  left: 300px;
+}
+#btn {
+  width: 300px;
+  height: 40px;
+  margin-left: 75px;
+  border: 0;
+  background: #ff6a00;
+  margin-top: 50px;
+  border-radius: 7px;
+  font: 18px/40px "";
+  color: white;
+}
+.tips {
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 10px;
+}
+.tips_true,.tips_false {
+  padding-left: 10px;
+}
+.tips_true {
+  color: green;
+}
+.tips_false {
+  color: red;
+}
+.footer-nav {
+  font-size: 12px;
+  width: 1226px;
+  margin: 30px auto;
+  text-align: center;
+  color: #d9d9d9;
+  a {
+    display: inline-block;
+    margin: 0 32px;
+    color: #737373;
+  }
+  b {
+    font-weight: bold;
+  }
+}
+footer {
+  font-size: 12px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+  .auth {
+    margin: 20px 0 30px;
+    a {
+      color: #737373;
+      text-decoration: none;
+    }
+    img {
+      margin: 0 5px;
+    }
+  }
+  p {
+  }
+  a {
+    p {
+      color: #737373;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+[{
+	"src":"img/meigiu.png",
+	"name":"鲜花.致美丽的你",
+	"price":"$123",
+	"goodsid":1
+},{
+	"src":"img/meigiu1.png",
+	"name":"鲜花.恰似你的温柔",
+	"price":"$234",
+	"goodsid":2
+},{
+	"src":"img/meigiu2.png",
+	"name":"鲜花.忘情巴黎",
+	"price":"$334",
+	"goodsid":3
+},{
+	"src":"img/meigiu3.png",
+	"name":"鲜花.浪漫告白",
+	"price":"$454",
+	"goodsid":4
+},{
+	"src":"img/meigiu4.png",
+	"name":"鲜花.牵手一生",
+	"price":"$454",
+	"goodsid":5
+},{
+	"src":"img/meigiu5.png",
+	"name":"鲜花.深情告白",
+	"price":"$454",
+	"goodsid":6
+},{
+	"src":"img/meigiu6.png",
+	"name":"鲜花.不变的承诺",
+	"price":"$454",
+	"goodsid":7
+},{
+	"src":"img/meigiu7.png",
+	"name":"鲜花.甜美公主",
+	"price":"$454",
+	"goodsid":8
+}]

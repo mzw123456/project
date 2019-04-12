@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/car.css"/>
+	</head>
+	<body>
+		<div id="topbanner"></div>
+			<header>
+				<div class="margin">
+					<ul class="header-l">
+						<a href="#"><span></span>收藏鲜花网(hua.com)</a>
+						<a href="#"><span class="wei"></span>关注微信
+							<!--<img src="img/VIPChatQR.jpg"/>-->
+						</a>
+						<a href="#"><span class="shouji"></span>花礼网app
+						</a>
+					</ul>
+					<ul class="header-center">
+						<a href="login.html">你好，请登录</a>
+						<a href="register.html">注册</a><span></span>
+						<a href="#">查询订单</a><span></span>
+						<a href="#">我的礼花</a><span></span>
+						<a href="#">客户服务</a>
+					</ul>
+					<ul class="header-right">
+						<a href="#"><span></span>
+							购物车(0)
+							<div class="list">
+								购物车空空如也哟~赶紧去逛逛吧
+							</div>
+						</a>
+						<a href="#" class="active">中国鲜花礼品网:中国鲜花网领先品牌</a>
+					</ul>
+				</div>
+			</header>
+			<div id="logo">
+				<div class="margin">
+					<a href=""><img src="img/logo.png"></a>
+				</div>
+				<div class="tel">
+					<span><img src="img/tel.png"/>&nbsp;&nbsp;&nbsp;400-889-17</span>
+					<span><img src="img/tell.png"/>&nbsp;&nbsp;&nbsp;400-889-17</span>
+				</div>
+			</div>
+			
+			<div class="margin">
+			<table border="1" cellspacing="0" width="1000" align="center">
+			<thead>
+				<tr>
+					<th></th>
+					<th width="100">商品图片</th>
+					<th>商品名称</th>
+					<th>价格</th>
+					<th width="120">数量</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+				<!--<tr>
+					<td><input type="checkbox" name="" id="" value="" /></td>
+					<td><img src=""/></td>
+					<td>名字</td>
+					<td>价格</td>
+					<td>1</td>
+					<td><em data-index="">删除</em></td>
+				</tr>-->
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2" id="checkAll"><label><input type="checkbox" />全选</label></td>
+					<td align="right">总价：</td>
+					<td id="zongjia"></td>
+					<td id="sum">总数量：0</td>
+					<td><em>全部删除</em></td>
+				</tr>
+			</tfoot>
+			
+		</table>
+	<div>
+		<footer>
+				<div class="auth">
+					<a href="https://ss.knet.cn/verifyseal.dll?sn=e15041744030058395oqbo000000&amp;ct=df&amp;a=1&amp;pa=0.8817607406526804" target="_blank"><img style="height:40px;" src="//img02.hua.com/pc/assets/img/cxwz.png"></a>
+					<a href="https://search.szfw.org/cert/l/CX20130306002238002312" target="_blank"><img src="//img02.hua.com/pc/assets/img/cxwz.gif" height="40" width="112"></a>
+					<a href="http://www.anquan.org/authenticate/cert/?site=www.hua.com&amp;at=realname" rel="nofollow" target="_blank"><img src="//img02.hua.com/pc/assets/img/smyz.gif" height="40" width="106"></a>
+					<img src="//img02.hua.com/pc/assets/img/slogan.png" height="50" width="212">
+					<a href="/member/payment/fillbyalipay?order_no=&amp;total_fee=" rel="nofollow" target="_blank"><img src="//img02.hua.com/pc/assets/img/zfb.gif" height="49" width="96"></a>
+					<a href="/profile/news_20111110.htm" target="_blank"><img src="//img02.hua.com/pc/assets/img/100.jpg" height="49" width="150"></a>
+					<a href="/profile/ICP.htm" rel="nofollow" target="_blank"><img src="//img02.hua.com/pc/assets/img/bico1.jpg" alt="ICP" height="46" width="35"></a>
+					<a href="http://szcert.ebs.org.cn/fab6de6a-ff80-4e63-89e4-cd531170c256" rel="nofollow" target="_blank"><img alt="工商网监" src="//img02.hua.com/pc/assets/img/bico4.jpg" height="46" width="35"></a>
+					<a href="http://www.sznet110.gov.cn/netalarm/index.jsp" rel="nofollow" target="_blank"><img src="//img02.hua.com/pc/assets/img/bico3.jpg" alt="网安" height="46" width="35"></a>
+				</div>
+				<p><a href="#">中国花卉协会委员 中国电子商务协会委员 ICP经营许可证 粤46353758@3用3534</a></p>
+			    <p><a href="#">www.hua.com mengziwei科技有限公司</a></p>
+			</footer>
+	</body>
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="libs/ajax.3.0.js"></script>
+	<!--<script type="text/javascript" src="libs/cookie.js"></script>-->
+	<script type="text/javascript" src="libs/jquery.cookie.js"></script>
+	<script type="text/javascript" src="moddlue/car.js"></script>
+	<!--<script type="text/javascript">
+		class Car{
+			constructor(options){
+//				1.解析参数
+				this.tbody = options.tbody;
+				this.zongjia=options.zongjia;
+				this.url = options.url;
+				this.sum=options.sum;
+//				2.请求数据
+				this.load();
+				
+//				5.绑定事件
+				this.addEvent();
+			}
+			load(){
+				var that = this;
+				ajax({
+					
+					url:this.url,
+					success:function(res){
+						that.res = JSON.parse(res);
+//						3.获取cookie
+						that.getCookie();
+					}
+				})
+			}
+			getCookie(){
+				console.log(1)
+//				获取cookie
+				this.goods = JSON.parse(getCookie("goods"));
+				console.log(this.goods)
+//				4.渲染页面
+				this.display()
+			}
+			display(){
+				var str = "";
+//				比对cookie和总数据
+				for(var i=0;i<this.res.length;i++){
+					for(var j=0;j<this.goods.length;j++){
+						if(this.res[i].goodsId == this.goods[j].id){
+						str += `<tr>
+										<td class="check"><label><input type="checkbox"/></label></td>
+										<td><img src="${this.res[i].src}"/></td>
+										<td>${this.res[i].name}</td>
+										<td>${this.res[i].price}</td>
+										<td><input type="number" value="${this.goods[j].num}"></td>
+										<td><em data-index="${this.res[i].goodsId}">删除</em></td>
+						       </tr>`		
+						}
+					}
+				}
+				this.tbody.innerHTML = str;
+				this.getsum();
+//				this.anniu();
+                this.fuxuan();
+                this.danxuan();
+			}
+//			addEvent(){
+//				var that = this;
+//				this.cont.addEventListener("click",function(eve){
+//					if(eve.target.nodeName == "EM"){
+//						that.id = eve.target.parentNode.parentNode.parentNode.parentNode.getAttribute("index");
+//						console.log(eve.target.parentNode.parentNode.parentNode.parentNode.getAttribute("index"))
+//						that.setCookie()
+//					}
+//				})
+//			}
+//			anniu(){
+//				var that=this;
+//				this.tbody.addEventListener("click",function(eve){
+//					if(eve.target.id=="select"){	
+//						
+//					}
+//				})
+//	
+//			}
+			
+			getsum(){
+				var sum=0;
+				var zongjia=0
+					for(var j=0;j<this.goods.length;j++){
+//						console.log(this.res[j].price)
+						
+						sum+=parseInt(this.goods[j].num)
+						zongjia+=parseFloat((this.goods[j].num)*(this.res[j].price))
+//						console.log(sum)
+//						console.log(zongjia)
+						}
+					this.sum.innerHTML=sum;	
+					this.zongjia.innerHTML=zongjia;
+					
+					return sum;
+					return zongjia;
+				}
+
+			addEvent(){
+				var that = this;
+				this.tbody.addEventListener("click",function(eve){
+					if(eve.target.nodeName == "EM"){
+//						找到点击商品的货号
+						that.id = eve.target.getAttribute("data-index");
+//						删除DOM元素
+						eve.target.parentNode.parentNode.remove();
+//						6.遍历cookie,找到符合条件的数据,做删除
+						that.changeCookie(function(index){
+//							8.删除并再次设置回去
+							that.goods.splice(index,1);
+						})
+					}
+				})
+				this.tbody.addEventListener("input",function(eve){
+					if(eve.target.type == "number"){
+//						10.先获取修改之后的数量,再获取当前商品的id
+						that.value = eve.target.value;
+						that.id = eve.target.parentNode.nextElementSibling.children[0].getAttribute("data-index");
+//						11.遍历cookie,找到符合条件的数据,做修改
+						that.changeCookie(function(index){
+							that.goods[index].num = that.value;
+						});
+					}
+				})
+			}
+			changeCookie(callback){
+//				7.找到cookie中符合条件的数据
+				for(var i=0;i<this.goods.length;i++){
+					if(this.goods[i].id == this.id){
+						break;
+					}
+				}
+				callback(i);
+//				9.再设置回去
+//				12.再设置回去
+				setCookie("goods",JSON.stringify(this.goods))
+			}
+		
+		 
+		fuxuan(){
+			var that=this;
+			$("#checkAll input").click(function(){
+				var flag=$(this).prop("checked");
+				if(flag){
+					$(".check label input").prop("checked",true);	
+					that.getsum();
+				}else{
+					$(".check label input" ).prop("checked",false);
+				}
+			})
+		}
+		
+		
+//		danxuan(){
+//			var that=this;
+//			this.tbody.addEventListener("click",function(eve){
+//				console.log(1)
+//				var flag=$(this).prop("checked");//获取当前input的状态
+//				console.log(flag)
+//				var CL=$(".check input").length;//列表长度；
+//				var CH=$("check input:checked").length;//类表中被选中的元素
+//			    if(CL==CH){
+//				$("checkAll input").prop("checked",true);
+//			}else{
+//				$("#checkAll input").prop("checked",false);
+//			}
+//			that.getsum();
+//				})
+//			}
+	
+			
+		}
+		
+		
+		
+		
+		
+		new Car({
+			zongjia:document.getElementById("zongjia"),
+			sum:document.getElementById("sum"),
+			tbody:document.getElementById("tbody"),
+			url:"./data/goods.json"
+		})
+		
+	</script>-->
+</html>
